@@ -10,13 +10,6 @@ Automatically organizes vendor-uploaded files into date-structured folders in S3
 - 🔍 Easy daily file retrieval
 - 📊 Built-in monitoring with CloudWatch and X-Ray
 
-## Architecture
-```mermaid
-graph LR
-    A[S3 Upload] --> B[S3 Event]
-    B --> C[Lambda Trigger]
-    C --> D[File Processing]
-    D --> E[Date-Based Organization]
 Prerequisites
 AWS account with CLI access
 Terraform 1.6.6 or higher
