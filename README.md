@@ -8,7 +8,7 @@ Automatically organizes vendor-uploaded files into date-structured folders in S3
 - 🏗️ Infrastructure-as-code with Terraform
 - 🐍 Python-powered Lambda function
 - 🔍 Easy daily file retrieval
-- 📊 Built-in monitoring (CloudWatch/X-Ray)
+- 📊 Built-in monitoring with CloudWatch and X-Ray
 
 ## Architecture
 ```mermaid
@@ -19,29 +19,35 @@ graph LR
     D --> E[Date-Based Organization]
 Prerequisites
 AWS account with CLI access
-
-Terraform 1.6.6+
-
-Python 3.9+
-
+Terraform 1.6.6 or higher
+Python 3.9 or higher
 AWS CLI configured
-
 Quick Start
+Initialize Terraform:
 
 
 terraform init
+Apply Terraform Configuration:
+
+
 terraform apply
-./pre-setup-script.sh  # Test the solution
+Test the Solution:
+
+
+./pre-setup-script.sh
 Project Structure
 
+Copy
 ├── lambda_functions/
 │   └── main.py          # File processing logic
 ├── infrastructure/
 │   ├── lambda.tf        # Lambda resources
-│   └── versions.tf      # Terraform config
+│   └── versions.tf      # Terraform configuration
 ├── scripts/
 │   └── pre-setup.sh     # Test file generator
-└── README.md
+└── README.md            # This file
 Clean Up
+To remove all resources, run:
+
 
 terraform destroy
